@@ -1,0 +1,137 @@
+:root {
+  --primary: #f59921;
+  --white-trans: rgba(255, 255, 255, 0.5);
+  --white: #fff;
+  --light: #f4f4f4;
+  --silver: #c0c0c0;
+  --black: #000;
+  --dark: #333;
+  --gray: #707070;
+  --test: pink;
+  --test2: green;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  background-color: var(--white);
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+/* utilities */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.img--contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* mobile */
+/* nav  */
+nav {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.top__bar {
+  display: flex; /* to align verticaly logo and hamburger */
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.hamburger {
+  padding: 10px;
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  outline: none; /* outline is set to none !!!!! */
+}
+.hamburger,
+.menu__main {
+  transition: transform 0.3s 0.1s ease-in-out;
+}
+/* .hamburger--active {
+  transform: translateX(250px);
+} */
+.hamburger__box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+}
+.hamburger__inner::before,
+.hamburger__inner::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
+}
+.hamburger__inner::before {
+  top: -10px;
+}
+.hamburger__inner::after {
+  top: 10px;
+}
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+.hamburger--active .hamburger__inner::before {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger--active .hamburger__inner::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+/* seting logo height */
+.logo {
+  display: inline-block;
+  width: 40%;
+  height: 46;
+}
+.menu__main {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  position: absolute;
+  top: 107.7px; /* height + padding of top__bar */
+  left: 0;
+  transform: translateX(-100vw);
+  font-size: 18px;
+  display: block;
+}
+.menu__main--active {
+  transform: translateX(0px);
+}
+.menu__main > a {
+  display: block;
+  color: var(--black);
+  padding: 30px 50px;
+  outline: none; /* outline is set to none !!!!! */
+}

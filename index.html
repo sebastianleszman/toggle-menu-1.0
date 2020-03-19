@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Toggle Menu</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- grid po to aby dolozyc logo -->
+      <div class="container grid">
+        <div class="top__bar">
+          <button class="hamburger">
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+          <div class="logo">
+            <img src="./assets/logo.jpg" alt="Logo" class="img--contain" />
+          </div>
+        </div>
+        <div class="menu__main grid">
+          <a href="#">Strona Główna</a>
+          <a href="#" class="dropdown">Produkty</a>
+          <div class="menu__sub"></div>
+          <a href="#">O Firmie</a>
+          <a href="#">Kontakt</a>
+        </div>
+      </div>
+    </nav>
+    <script src="./app.js"></script>
+  </body>
+</html>
