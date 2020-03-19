@@ -132,7 +132,6 @@ nav {
 }
 .menu__main > a {
   display: block;
-  color: var(--black);
   padding: 30px 50px;
   outline: none; /* outline is set to none !!!!! */
 }
