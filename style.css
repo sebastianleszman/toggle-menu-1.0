@@ -25,6 +25,7 @@ button {
 }
 a {
   text-decoration: none;
+  color: var(--black);
 }
 /* utilities */
 .grid {
@@ -134,4 +135,19 @@ nav {
   color: var(--black);
   padding: 30px 50px;
   outline: none; /* outline is set to none !!!!! */
+}
+.menu__sub {
+  display: none;
+}
+.group--label {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.menu__sub > a {
+  display: block;
+  padding: 30px 50px;
+  outline: none;
+}
+.dropdown--active {
+  color: var(--primary);
 }
